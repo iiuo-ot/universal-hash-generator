@@ -1,0 +1,109 @@
+@import url('../styles.css');
+
+/* Additional styling for Universal Hash Generator with detection */
+.tool-box {
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 14px rgba(0, 170, 255, 0.15);
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#inputText, .output, .algo-select {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: monospace;
+}
+
+.algo-select {
+  font-family: system-ui;
+  cursor: pointer;
+  color: var(--sky);
+  background: rgba(255,255,255,0.03);
+}
+
+.output {
+  color: var(--sky);
+  resize: none;
+  overflow-y: auto;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--sky);
+  color: var(--sky);
+  cursor: pointer;
+  transition: transform 0.08s ease, background-color 0.2s ease;
+}
+
+.btn.secondary:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 170, 255, 0.1);
+}
+
+.message {
+  color: #6dd17a;
+  display: none;
+  margin-top: 10px;
+}
+
+.detected {
+  color: #00ffaa;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  display: none;
+}
+
+.note {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 16px;
+}
+
+/* Info Section */
+.article-section {
+  max-width: 800px;
+  margin: 50px auto;
+  line-height: 1.7;
+  color: var(--grey);
+}
+
+.article-section h2 {
+  color: var(--white);
+  margin-top: 32px;
+  font-size: 1.4rem;
+}
+
+.article-section ul {
+  margin: 10px 0 20px 20px;
+}
+
+.article-section p {
+  margin-bottom: 12px;
+}
+
+/* Focus glow */
+.output:focus, #inputText:focus, .algo-select:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 170, 255, 0.25);
+}

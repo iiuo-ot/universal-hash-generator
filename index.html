@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Universal Hash Generator — Online Tools</title>
+  <meta name="description"
+    content="Generate MD5, SHA-1, SHA-256, or SHA-512 hashes instantly with live updates and auto-detect feature.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../">Online Tools</a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="../#tools">Tools</a></li>
+          <li><a href="../#categories">Categories</a></li>
+          <li><a href="../#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="controls">
+        <input class="search" type="search" id="toolSearch" placeholder="Search tools…" list="autocompleteList" />
+        <datalist id="autocompleteList"></datalist>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero container">
+    <h1>Universal Hash Generator</h1>
+    <p class="lead">Generate and detect MD5, SHA-1, SHA-256, or SHA-512 hashes instantly with live output and copy support.</p>
+  </section>
+
+  <section class="container">
+    <div class="card tool-box">
+      <label><strong>Select Algorithm:</strong></label>
+      <select id="algoSelect" class="algo-select">
+        <option value="MD5">MD5</option>
+        <option value="SHA1">SHA-1</option>
+        <option value="SHA256">SHA-256</option>
+        <option value="SHA512">SHA-512</option>
+      </select>
+
+      <label style="margin-top:14px;"><strong>Enter Text or Paste Hash:</strong></label>
+      <textarea id="inputText" placeholder="Type or paste your text or existing hash here..." rows="5"></textarea>
+
+      <div class="btn-wrap">
+        <button class="btn secondary" id="copyBtn">Copy Hash</button>
+        <button class="btn secondary" id="clearBtn">Clear</button>
+      </div>
+
+      <label style="margin-top:14px;"><strong>Hash Output:</strong></label>
+      <textarea id="outputText" class="output" rows="5" readonly
+        placeholder="Your hash will appear here automatically"></textarea>
+
+      <p class="message" id="copyMsg">Copied to clipboard!</p>
+      <p class="detected" id="detectMsg"></p>
+      <p class="note">Note: The hash updates live as you type. The tool can also auto-detect pasted hashes.</p>
+    </div>
+  </section>
+
+  <section class="container article-section">
+    <h2>About This Tool</h2>
+    <p>The Universal Hash Generator allows you to generate or identify common cryptographic hashes such as
+      <strong>MD5</strong>, <strong>SHA-1</strong>, <strong>SHA-256</strong>, and <strong>SHA-512</strong> completely
+      offline, right in your browser.</p>
+
+    <h2>Auto-Detection Logic</h2>
+    <p>When you paste an existing hash, the tool checks its length and format to guess the correct algorithm.</p>
+
+    <h2>Conclusion</h2>
+    <p>This multi-hash generator and detector is fast, private, and useful for developers, cybersecurity learners, and
+      students.</p>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Online Tools</strong>
+        <div class="muted">© <span id="year"></span> ot.itisuniqueofficial.com</div>
+      </div>
+      <div class="footer-links">
+        <a href="/PRIVACY">Privacy</a>
+        <a href="https://github.com/orgs/iiuo-ot/discussions">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+  <script src="/search.js"></script>
+</body>
+
+</html>
